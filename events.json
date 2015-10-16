@@ -1,0 +1,24 @@
+[
+  { starts_at: '2015-10-19 1200', ends_at: '2015-10-19 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-19 1600', ends_at: '2015-10-19 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-19 1800', ends_at: '2015-10-19 2000', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'half_price' } }
+  { starts_at: '2015-10-20 1200', ends_at: '2015-10-00 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-20 1600', ends_at: '2015-10-29 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-21 1200', ends_at: '2015-10-21 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-21 1600', ends_at: '2015-10-21 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-22 1200', ends_at: '2015-10-22 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-22 1600', ends_at: '2015-10-22 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-23 1200', ends_at: '2015-10-23 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-23 1600', ends_at: '2015-10-23 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-26 1200', ends_at: '2015-10-26 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-26 1600', ends_at: '2015-10-26 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-26 1800', ends_at: '2015-10-26 2000', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'half_price' } }
+  { starts_at: '2015-10-27 1200', ends_at: '2015-10-27 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-27 1600', ends_at: '2015-10-27 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-28 1200', ends_at: '2015-10-28 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-28 1600', ends_at: '2015-10-28 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-29 1200', ends_at: '2015-10-29 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-29 1600', ends_at: '2015-10-29 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+  { starts_at: '2015-10-30 1200', ends_at: '2015-10-30 1500', bar_id: 1, offer: { beer_or_burger: 'burger', type: 'meal_deal', info: 'Buy a burger, fries and drink for 12€' } }
+  { starts_at: '2015-10-30 1600', ends_at: '2015-10-30 1800', bar_id: 1, offer: { beer_or_burger: 'beer', type: 'two_for_one' } }
+]
