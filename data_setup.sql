@@ -97,6 +97,6 @@ INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) 
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (33,3,6,1095,1215,'beer,football,jugs','two_for_one');
 
 --sunday
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (34,3,6,900,1020,'beer,football,jugs','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (35,3,6,1020,1140,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (34,3,7,900,1020,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (35,3,7,1020,1140,'beer,football,jugs','two_for_one');
 
