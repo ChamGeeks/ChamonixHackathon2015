@@ -17,6 +17,13 @@ class DayOfWeek
   property :name, String
 
   has n, :offers
+
+  def to_json(_)
+    {
+      name: name,
+      offers: offers.all(order: [:starts_at])
+    }
+  end
 end
 
 class Offer
@@ -86,6 +93,7 @@ end
 
 get '/days/:day' do
   content_type :json
+
   @day = DayOfWeek.all(name: params[:day])
   @day.to_json
 end
