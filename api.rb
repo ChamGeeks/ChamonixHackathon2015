@@ -32,17 +32,25 @@ class Offer
   belongs_to :bar
 
   def to_json(_)
-    starts_at_str = format('%02d', (starts_at%60))
-    ends_at_str = format('%02d', (ends_at%60))
     {
       id: id,
-      bar: bar.to_json,
-      starts_at: "#{starts_at/60}:#{starts_at_str}",
-      ends_at: "#{ends_at/60}:#{ends_at_str}",
+      bar: bar,
+      starts_at: "#{starts_at/60}:#{starts_at_minute}",
+      ends_at: "#{ends_at/60}:#{ends_at_minute}",
       tags: tags.split(','),
       type: type,
       day_of_week: day_of_week
     }
+  end
+
+  private
+
+  def starts_at_minute
+    @starts_at_minute ||= format('%02d', (starts_at%60))
+  end
+
+  def ends_at_minute 
+    @ends_at_minute ||= format('%02d', (ends_at%60))
   end
 end
 
@@ -74,5 +82,11 @@ get '/offers' do
 
   @offers = Offer.all
   @offers.to_json
+end
+
+get '/days/:day' do
+  content_type :json
+  @day = DayOfWeek.all(name: params[:day])
+  @day.to_json
 end
 
