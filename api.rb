@@ -17,13 +17,6 @@ class DayOfWeek
   property :name, String
 
   has n, :offers
-
-  def to_json(_)
-    {
-      name: name,
-      offers: offers.all(order: [:starts_at])
-    }
-  end
 end
 
 class Offer
@@ -38,16 +31,16 @@ class Offer
   belongs_to :day_of_week
   belongs_to :bar
 
-  def to_json(_)
-    {
-      id: id,
-      bar: bar,
-      starts_at: "#{starts_at/60}:#{starts_at_minute}",
-      ends_at: "#{ends_at/60}:#{ends_at_minute}",
-      tags: tags.split(','),
-      type: type,
-      day_of_week: day_of_week
-    }
+  def day
+    day_of_week.name
+  end
+
+  def ends
+    "#{ends_at/60}:#{ends_at_minute}"
+  end
+
+  def starts
+    "#{starts_at/60}:#{starts_at_minute}"
   end
 
   private
@@ -70,6 +63,10 @@ class Bar
   property :longitude, Decimal
 
   has n, :offers
+
+  def locations
+    { lat: latitude, long: longitude }
+  end
 end
 
 DataMapper.finalize
@@ -80,21 +77,53 @@ get '/' do
   "Days of week: #{DayOfWeek.all.map{|d| d.name}.join(', ')}"
 end
 
-get '/bars' do
+get '/bars/:id' do
+  content_type :json
 
+  @bar = Bar.all(id: params[:id])
+  @bar.to_json(
+    only: [:id, :name], 
+    methods: [:location],
+    relationships: { 
+      offers: {
+        only: [:id, :tags, :type],
+        methods: [:starts, :ends, :day]
+      }
+    })
 end
 
 get '/offers' do
   content_type :json
 
   @offers = Offer.all
-  @offers.to_json
+  @offers.to_json(
+    only: [:id, :tags, :type],
+    methods: [:starts, :ends, :day],
+    relationships: {
+      bar: {
+        only: [:id, :name, :location]
+      }
+    }
+  )
 end
 
 get '/days/:day' do
   content_type :json
 
   @day = DayOfWeek.all(name: params[:day])
-  @day.to_json
+  @day.to_json(
+    only: [:name],
+    relationships: {
+      offers: {
+        only: [:id, :tags, :type],
+        methods: [:starts, :ends, :day],
+        relationships: {
+          bar: {
+            only: [:id, :name, :location]
+          }
+        }
+      }
+    }
+  )
 end
 
