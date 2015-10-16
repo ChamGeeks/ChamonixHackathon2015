@@ -15,6 +15,21 @@ class DayOfWeek
 
   property :id, Serial
   property :name, String
+
+  has n, :offers
+end
+
+class Offer
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :starts_at, Integer
+  property :ends_at, Integer
+  property :tags, String
+  property :type, String
+
+  belongs_to :day_of_week
+  belongs_to :bar
 end
 
 class Bar
@@ -25,13 +40,14 @@ class Bar
   property :latitude, Decimal
   property :longitude, Decimal
 
+  has n, :offers
 end
 
 DataMapper.finalize
 
 
 get '/' do
-  "Bars: #{Bar.all.map{|b| b.name}.join(', ')}<br />"\
+  "Bars: #{Bar.all.map{|b| "#{b.name} (#{b.offers.count} offers)"}.join(', ')}<br />"\
   "Days of week: #{DayOfWeek.all.map{|d| d.name}.join(', ')}"
 end
 
