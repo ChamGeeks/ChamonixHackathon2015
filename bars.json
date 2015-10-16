@@ -1,9 +1,9 @@
 [
-  { 'id': 1, 'name': 'Monkey', 'prices': [ 'beer': 550, 'burger': 1050 ], 'location': { 'lat': 45.9190977, 'long': 6.8657143 } },
-  { 'id': 2, 'name': 'Munster', 'prices': { 'beer': 450 }, 'location': { 'lat': 45.9189752, 'long': 6.8653393 } },
-  { 'id': 3, 'name': 'Bard Up', 'prices': [ 'beer': 550 ], 'location': { 'lat': 45.924706, 'long': 6.870534 } },
-  { 'id': 4, 'name': 'Boogie Woogie', 'prices': [ 'beer': 450 ], 'location': { 'lat': 45.924225, 'long': 6.870329 } },
-  { 'id': 5, 'name': 'MBC', 'prices': [ 'beer': 550, 'burger': 1100 ], 'location': { 'lat': 45.9274404, 'long': 6.873646 } },
-  { 'id': 6, 'name': 'Chamnbre Neuf', 'prices': [ 'beer': 550, 'burger': 1050 ], 'location': { 'lat': 45.9226919, 'long': 6.8705356 } },
-  { 'id': 7, 'name': 'Poco Loco', 'prices': [ 'beer': 600, 'burger': 600 ], 'location': { 'lat': 45.9225167, 'long': 6.8667908 } },
+  { "id": 1, "name": "Monkey", "prices": [ "beer": 550, "burger": 1050 ], "location": { "lat": 45.9190977, "long": 6.8657143 } },
+  { "id": 2, "name": "Munster", "prices": { "beer": 450 }, "location": { "lat": 45.9189752, "long": 6.8653393 } },
+  { "id": 3, "name": "Bard Up", "prices": [ "beer": 550 ], "location": { "lat": 45.924706, "long": 6.870534 } },
+  { "id": 4, "name": "Boogie Woogie", "prices": [ "beer": 450 ], "location": { "lat": 45.924225, "long": 6.870329 } },
+  { "id": 5, "name": "MBC", "prices": [ "beer": 550, "burger": 1100 ], "location": { "lat": 45.9274404, "long": 6.873646 } },
+  { "id": 6, "name": "Chamnbre Neuf", "prices": [ "beer": 550, "burger": 1050 ], "location": { "lat": 45.9226919, "long": 6.8705356 } },
+  { "id": 7, "name": "Poco Loco", "prices": [ "beer": 600, "burger": 600 ], "location": { "lat": 45.9225167, "long": 6.8667908 } },
 ]
