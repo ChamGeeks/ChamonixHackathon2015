@@ -64,39 +64,39 @@ INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) 
 -- tuesday
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (9,1,2,960,1080,'beer','two_for_one');
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (10,2,2,975,1140,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,2,1140,1410,'shots,tequila','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (11,6,2,1200,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (12,1,2,1260,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (13,2,2,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (11,3,2,1140,1410,'shots,tequila','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (12,6,2,1200,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (13,1,2,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (14,2,2,1260,1320,'cocktails','half_price');
 
 -- wednesday
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (14,1,3,960,1080,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (15,2,3,975,1140,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (16,6,3,1200,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (17,1,3,1260,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (18,2,3,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (15,1,3,960,1080,'beer','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (16,2,3,975,1140,'beer','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (17,6,3,1200,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (18,1,3,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (19,2,3,1260,1320,'cocktails','half_price');
 
 -- thursday
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (19,1,4,960,1080,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (20,2,4,975,1140,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,6,1140,1410,'shots,genepi','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (21,6,4,1200,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (22,1,4,1260,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (23,2,4,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (20,1,4,960,1080,'beer','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (21,2,4,975,1140,'beer','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (22,3,6,1140,1410,'shots,genepi','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (23,6,4,1200,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (24,1,4,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (25,2,4,1260,1320,'cocktails','half_price');
 
 -- friday
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (24,1,5,960,1080,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (25,2,5,975,1140,'beer','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (26,6,5,1200,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (27,1,5,1260,1320,'cocktails','half_price');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (28,2,5,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (26,1,5,960,1080,'beer','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (27,2,5,975,1140,'beer','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (28,6,5,1200,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,1,5,1260,1320,'cocktails','half_price');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (30,2,5,1260,1320,'cocktails','half_price');
 
 -- saturday
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,6,780,900,'beer,football,jugs','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,6,960,1080,'beer,football,jugs','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,6,1095,1215,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (31,3,6,780,900,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (32,3,6,960,1080,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (33,3,6,1095,1215,'beer,football,jugs','two_for_one');
 
 --sunday
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,6,900,1020,'beer,football,jugs','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,6,1020,1140,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (34,3,6,900,1020,'beer,football,jugs','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (35,3,6,1020,1140,'beer,football,jugs','two_for_one');
 
