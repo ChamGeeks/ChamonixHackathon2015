@@ -1,3 +1,8 @@
+DROP TABLE days_of_week;
+DROP TABLE bars;
+DROP TABLE offers;
+DROP TABLE prices;
+
 CREATE TABLE days_of_week
 (
   id int PRIMARY KEY,
