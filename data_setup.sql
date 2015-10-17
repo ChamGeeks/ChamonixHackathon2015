@@ -1,3 +1,8 @@
+DROP TABLE days_of_week;
+DROP TABLE bars;
+DROP TABLE offers;
+DROP TABLE items;
+
 CREATE TABLE days_of_week
 (
   id int PRIMARY KEY,
@@ -9,7 +14,8 @@ CREATE TABLE bars
   id int PRIMARY KEY,
   name VARCHAR(20) UNIQUE,
   latitude DECIMAL(9,7),
-  longitude DECIMAL(9,7)
+  longitude DECIMAL(9,7),
+  image_url VARCHAR(255)
 );
 
 CREATE TABLE offers
@@ -20,14 +26,16 @@ CREATE TABLE offers
   starts_at int NOT NULL,
   ends_at int NOT NULL,
   tags VARCHAR(50),
-  type VARCHAR(15) NOT NULL
+  type VARCHAR(15) NOT NULL,
+  extra_info VARCHAR(255)
 );
 
-CREATE TABLE prices
+CREATE TABLE items
 (
   id int PRIMARY KEY,
+  bar_id int NOT NULL,
   type VARCHAR(15) NOT NULL,
-  price int NOT NULL
+  price decimal(5,2) NOT NULL
 );
 
 -- the days of the week
@@ -41,13 +49,13 @@ INSERT INTO days_of_week (id, name) VALUES (7, 'sunday');
 
 
 -- all of the bars
-INSERT INTO bars (id, name, latitude, longitude) VALUES (1, 'Monkey Bar', 45.9190977, 6.8657143);
-INSERT INTO bars (id, name, latitude, longitude) VALUES (2, 'Munster', 45.9189752, 6.8653393);
-INSERT INTO bars (id, name, latitude, longitude) VALUES (3, 'Bard Up', 45.924706, 6.870534);
-INSERT INTO bars (id, name, latitude, longitude) VALUES (4, 'Boogie Woogie', 45.924225, 6.870329);
-INSERT INTO bars (id, name, latitude, longitude) VALUES (5, 'MBC', 45.9274404, 6.873646);
-INSERT INTO bars (id, name, latitude, longitude) VALUES (6, 'Chambre Neuf', 45.9226919, 6.8705356);
-INSERT INTO bars (id, name, latitude, longitude) VALUES (7, 'Poco Loco', 45.9225167, 6.8667908);
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (1, 'Monkey Bar', 45.9190977, 6.8657143, 'http://media-cdn.tripadvisor.com/media/photo-s/02/9f/05/48/spring-terrace.jpg');
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (2, 'Munster', 45.9189752, 6.8653393, 'http://www.irishpubsglobal.com/wp-content/uploads/2015/10/Munster-Bar5.jpeg');
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (3, 'Bard Up', 45.924706, 6.870534, 'http://static1.chamonet.com/image_uploader/photos/large/bar-d-up-snow-sign-1_7700.jpg');
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (4, 'Boogie Woogie', 45.924225, 6.870329, 'https://fbcdn-photos-c-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-0/s480x480/11027435_450267481803017_1587677382271231108_n.jpg?oh=cb83cbf3f5ef78d71dd20c3d7db8bb7a&oe=56A01D74&__gda__=1449340228_a64e50c83f141a8b256de4f3b6e958da');
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (5, 'MBC', 45.9274404, 6.873646, 'http://images.chamonix.net/images/originals/14775-original/image-chamonix.jpg');
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (6, 'Chambre Neuf', 45.9226919, 6.8705356, 'http://www.peaktransfer.com/blog/wp-content/uploads/2014/02/chamonix-nightlife.jpg');
+INSERT INTO bars (id, name, latitude, longitude, image_url) VALUES (7, 'Poco Loco', 45.9225167, 6.8667908, 'http://media-cdn.tripadvisor.com/media/photo-s/08/22/c6/f8/photo1jpg.jpg');
 
 
 -- offers by day

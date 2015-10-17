@@ -12,3 +12,18 @@ The straightforward approach to building a mobile app is to use Objective C for 
 Everyone who attends this weekend will pick the framework that interests them the most and work on that framework in teams to build a burger and beer app for Chamonix.
 
 The premise for the app is both straightforward and open-ended.  We will provide some simple data that lists some of the bars in Chamonix, and some of the "happy hour" beer deals and the menu du jour (or other) burger deals that they run.  You cna then use this data to produce an interesting and fun app for the thirsty and hungry inhabitants of the Chamonix valley, all using the framework that you'd like to try out!
+
+## The API
+
+The hackathon API is available at https://chamonix-hackathon-2015.herokuapp.com.
+The following endpoint are browsable from the API:
+
+```
+/offers
+
+/bars
+
+/bars/:id
+
+/days/:name
+```

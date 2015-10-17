@@ -3,77 +3,32 @@ require 'data_mapper'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/burgers_and_beers.db")
 
-class DayOfWeek
-  include DataMapper::Resource
-
-  storage_names[:default] = 'days_of_week'
-
-  property :id, Serial
-  property :name, String
-
-  has n, :offers
-end
-
-class Offer
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :starts_at, Integer
-  property :ends_at, Integer
-  property :tags, String
-  property :type, String
-
-  belongs_to :day_of_week
-  belongs_to :bar
-
-  def day
-    day_of_week.name
-  end
-
-  def ends
-    "#{ends_at/60}:#{ends_at_minute}"
-  end
-
-  def starts
-    "#{starts_at/60}:#{starts_at_minute}"
-  end
-
-  def tagged
-    tags.split(',')
-  end
-
-  private
-
-  def starts_at_minute
-    @starts_at_minute ||= format('%02d', (starts_at%60))
-  end
-
-  def ends_at_minute 
-    @ends_at_minute ||= format('%02d', (ends_at%60))
-  end
-end
-
-class Bar
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :name, String
-  property :latitude, Decimal
-  property :longitude, Decimal
-
-  has n, :offers
-
-  def locations
-    { lat: latitude, long: longitude }
-  end
-end
+require "#{Dir.pwd}/models/day_of_week.rb"
+require "#{Dir.pwd}/models/offer.rb"
+require "#{Dir.pwd}/models/item.rb"
+require "#{Dir.pwd}/models/bar.rb"
 
 DataMapper.finalize
 
+before do
+  response['Access-Control-Allow-Origin'] = '*'
+end
 
 get '/' do
+  "Welcome to the Chamonix Hackathon 2015 API!i <br />"\
+    "From here, you can browse the API:<br />"\
   "Bars: #{Bar.all.map{|b| "#{b.name} (#{b.offers.count} offers)"}.join(', ')}<br />"\
   "Days of week: #{DayOfWeek.all.map{|d| d.name}.join(', ')}"
+end
+
+get '/bars' do
+  content_type :json
+
+  @bars = Bar.all
+  @bars.to_json(
+    only: [:id, :name, :image_url], 
+    methods: [:location]
+  )
 end
 
 get '/bars/:id' do
@@ -81,7 +36,7 @@ get '/bars/:id' do
 
   @bar = Bar.all(id: params[:id])
   @bar.to_json(
-    only: [:id, :name], 
+    only: [:id, :image_url, :name], 
     methods: [:location],
     relationships: { 
       offers: {
@@ -89,6 +44,15 @@ get '/bars/:id' do
         methods: [:day, :starts, :ends, :tagged]
       }
     })
+end
+
+get '/bars/:id/menu' do
+  content_type :json
+
+  @items = Item.all(bar_id: params[:id])
+  @items.to_json(
+    only: [:id, :type, :price]
+  )
 end
 
 get '/offers' do
