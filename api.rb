@@ -5,6 +5,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/burgers_
 
 require "#{Dir.pwd}/models/day_of_week.rb"
 require "#{Dir.pwd}/models/offer.rb"
+require "#{Dir.pwd}/models/item.rb"
 require "#{Dir.pwd}/models/bar.rb"
 
 DataMapper.finalize

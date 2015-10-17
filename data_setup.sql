@@ -34,7 +34,7 @@ CREATE TABLE items
   id int PRIMARY KEY,
   bar_id int NOT NULL,
   type VARCHAR(15) NOT NULL,
-  price int NOT NULL
+  price decimal(5,2) NOT NULL
 );
 
 -- the days of the week
