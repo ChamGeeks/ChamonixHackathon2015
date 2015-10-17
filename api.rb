@@ -20,7 +20,8 @@ end
 get '/bars' do
   @bars = Bar.all
   @bars.to_json(
-    only: [:id, :name], methods: [:location]
+    only: [:id, :name, :image_url], 
+    methods: [:location]
   )
 end
 
