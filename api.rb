@@ -33,7 +33,7 @@ get '/bars/:id' do
     methods: [:location],
     relationships: { 
       offers: {
-        only: [:id, :type],
+        only: [:id, :image_url, :type],
         methods: [:day, :starts, :ends, :tagged]
       }
     })

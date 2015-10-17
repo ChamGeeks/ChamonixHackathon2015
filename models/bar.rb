@@ -5,6 +5,7 @@ class Bar
   property :name, String
   property :latitude, Decimal
   property :longitude, Decimal
+  property :image_url, String
 
   has n, :offers
 
