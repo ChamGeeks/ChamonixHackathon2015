@@ -21,6 +21,8 @@ The following endpoint are browsable from the API:
 ```
 /offers
 
+/bars
+
 /bars/:id
 
 /days/:name
