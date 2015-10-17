@@ -15,6 +15,7 @@ The premise for the app is both straightforward and open-ended.  We will provide
 
 ## The API
 
+The hackathon API is available at https://chamonix-hackathon-2015.herokuapp.com.
 The following endpoint are browsable from the API:
 
 ```
