@@ -1,7 +1,7 @@
 DROP TABLE days_of_week;
 DROP TABLE bars;
 DROP TABLE offers;
-DROP TABLE prices;
+DROP TABLE items;
 
 CREATE TABLE days_of_week
 (
