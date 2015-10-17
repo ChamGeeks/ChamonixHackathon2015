@@ -72,8 +72,17 @@ DataMapper.finalize
 
 
 get '/' do
+  "Welcome to the Chamonix Hackathon 2015 API!i <br />"\
+    "From here, you can browse the API:<br />"\
   "Bars: #{Bar.all.map{|b| "#{b.name} (#{b.offers.count} offers)"}.join(', ')}<br />"\
   "Days of week: #{DayOfWeek.all.map{|d| d.name}.join(', ')}"
+end
+
+get '/bars' do
+  @bars = Bar.all
+  @bars.to_json(
+    only: [:id, :name], methods: [:location]
+  )
 end
 
 get '/bars/:id' do
