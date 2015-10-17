@@ -40,6 +40,12 @@ get '/bars/:id' do
     })
 end
 
+get '/bars/:id/menu' do
+  content_type :json
+
+  @items = Item.all(bar_id: params[:id]).to_json
+end
+
 get '/offers' do
   content_type :json
 

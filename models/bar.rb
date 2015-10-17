@@ -8,6 +8,7 @@ class Bar
   property :image_url, String
 
   has n, :offers
+  has n, :items
 
   def locations
     { lat: latitude, long: longitude }
