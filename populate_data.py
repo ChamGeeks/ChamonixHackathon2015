@@ -8,6 +8,6 @@ out_filename = 'burgers_and_beers.db'
 
 with open(in_filename) as in_file:
     conn = sqlite3.connect(out_filename)
-    conn.cursor().executescript(in_file.read())
+    conn.executescript(in_file.read())
     conn.commit()
     conn.close()
