@@ -3,7 +3,7 @@ class Item
 
    property :id, Serial
    property :type, String
-   property :price, Decimal
+   property :price, Integer
 
    belongs_to :bar
 end
