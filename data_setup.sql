@@ -108,3 +108,29 @@ INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) 
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (34,3,7,900,1020,'beer,football,jugs','two_for_one');
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (35,3,7,1020,1140,'beer,football,jugs','two_for_one');
 
+
+-- Items sticked by bars
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (1, 1, 'beer', 550);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (2, 2, 'beer', 450);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (3, 3, 'beer', 600);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (4, 4, 'beer', 450);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (5, 5, 'beer', 600);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (6, 6, 'beer', 550);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (7, 7, 'beer', 550);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (8, 1, 'burger', 850);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (12, 5, 'beer', 1000);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (13, 6, 'beer', 950);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (14, 7, 'beer', 600);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (15, 1, 'cocktail', 650);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (16, 2, 'cocktail', 550);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (17, 3, 'cocktail', 600);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (18, 4, 'cocktail', 550);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (19, 5, 'cocktail', 650);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (20, 6, 'cocktail', 650);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (21, 5, 'wings', 700);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (22, 1, 'shots', 300);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (23, 2, 'shots', 200);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (24, 3, 'shots', 250);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (25, 4, 'shots', 100);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (26, 5, 'shots', 300);
+INSERT INTO ITEMS (id, bar_id, type, price) VALUES (27, 6, 'shots', 250);
