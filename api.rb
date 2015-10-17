@@ -27,7 +27,7 @@ get '/bars' do
   @bars = Bar.all
   @bars.to_json(
     only: [:id, :name, :image_url], 
-    methods: [:location]
+    methods: [:location, :tagged]
   )
 end
 
@@ -37,7 +37,7 @@ get '/bars/:id' do
   @bar = Bar.all(id: params[:id])
   @bar.to_json(
     only: [:id, :image_url, :name], 
-    methods: [:location],
+    methods: [:location, :tagged],
     relationships: { 
       offers: {
         only: [:id, :type],

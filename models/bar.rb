@@ -13,4 +13,8 @@ class Bar
   def locations
     { lat: latitude, long: longitude }
   end
+
+  def tagged
+    offers.all.map {|o| o.tags.split(',') }.flatten.uniq
+  end
 end
