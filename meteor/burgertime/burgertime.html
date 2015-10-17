@@ -11,9 +11,17 @@
 </body>
 
 <template name="bars">
-  {{#each all}}
-  <li>{{name}}</li>
-  {{/each}}
+  {{getall}}
+  {{#with bars}}
+  <!-- if location has an error property, display it -->
+  {{#if error}}
+  <p>There was an error: {{error}}!</p>
+  {{else}}
   <ul>
+    {{#each bars}}
+    <li>{{name}}</li>
+    {{/each}}
   </ul>
+  {{/if}}
+  {{/with}}
 </template>

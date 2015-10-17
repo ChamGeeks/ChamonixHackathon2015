@@ -2,13 +2,15 @@ var baseURL = 'https://chamonix-hackathon-2015.herokuapp.com';
 
 if (Meteor.isClient) {
   Template.bars.helpers({
-    all: HTTP.get(baseURL + '/bars', function (err, res) {
+    getall: HTTP.get(baseURL + '/bars', function (err, res) {
       if (err) {
-        console.log(err);
-        return 'Error finding bars';
+        Session.set('barlist', {error: err});
+      } else {
+        Session.set('barlist', res.data);
       }
-      console.log(res.data);
-      return res.data;
-    })
+    }),
+    bars : function () {
+      return Session.get('barlist') || 'Loading';
+    }
   });
 }
