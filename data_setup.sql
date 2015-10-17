@@ -26,7 +26,8 @@ CREATE TABLE offers
   starts_at int NOT NULL,
   ends_at int NOT NULL,
   tags VARCHAR(50),
-  type VARCHAR(15) NOT NULL
+  type VARCHAR(15) NOT NULL,
+  extra_info VARCHAR(255)
 );
 
 CREATE TABLE items

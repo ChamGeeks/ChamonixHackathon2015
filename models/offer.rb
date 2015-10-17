@@ -6,6 +6,7 @@ class Offer
   property :ends_at, Integer
   property :tags, String
   property :type, String
+  property :extra_info, String
 
   belongs_to :day_of_week
   belongs_to :bar

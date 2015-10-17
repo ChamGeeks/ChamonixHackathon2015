@@ -10,6 +10,9 @@ require "#{Dir.pwd}/models/bar.rb"
 
 DataMapper.finalize
 
+before do
+  response['Access-Control-Allow-Origin'] = '*'
+end
 
 get '/' do
   "Welcome to the Chamonix Hackathon 2015 API!i <br />"\
@@ -46,7 +49,10 @@ end
 get '/bars/:id/menu' do
   content_type :json
 
-  @items = Item.all(bar_id: params[:id]).to_json
+  @items = Item.all(bar_id: params[:id])
+  @items.to_json(
+    only: [:id, :type, :price]
+  )
 end
 
 get '/offers' do
