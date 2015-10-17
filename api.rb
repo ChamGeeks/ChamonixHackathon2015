@@ -43,6 +43,10 @@ class Offer
     "#{starts_at/60}:#{starts_at_minute}"
   end
 
+  def tagged
+    tags.split(',')
+  end
+
   private
 
   def starts_at_minute
@@ -86,8 +90,8 @@ get '/bars/:id' do
     methods: [:location],
     relationships: { 
       offers: {
-        only: [:id, :tags, :type],
-        methods: [:starts, :ends, :day]
+        only: [:id, :type],
+        methods: [:day, :starts, :ends, :tagged]
       }
     })
 end
@@ -97,8 +101,8 @@ get '/offers' do
 
   @offers = Offer.all
   @offers.to_json(
-    only: [:id, :tags, :type],
-    methods: [:starts, :ends, :day],
+    only: [:id, :type],
+    methods: [:day, :starts, :ends, :tagged],
     relationships: {
       bar: {
         only: [:id, :name, :location]
@@ -115,8 +119,8 @@ get '/days/:day' do
     only: [:name],
     relationships: {
       offers: {
-        only: [:id, :tags, :type],
-        methods: [:starts, :ends, :day],
+        only: [:id, :type],
+        methods: [:day, :starts, :ends, :tagged],
         relationships: {
           bar: {
             only: [:id, :name, :location]
