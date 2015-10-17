@@ -5,22 +5,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/burgers_
 
 require "#{Dir.pwd}/models/day_of_week.rb"
 require "#{Dir.pwd}/models/offer.rb"
-
-
-class Bar
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :name, String
-  property :latitude, Decimal
-  property :longitude, Decimal
-
-  has n, :offers
-
-  def locations
-    { lat: latitude, long: longitude }
-  end
-end
+require "#{Dir.pwd}/models/bar.rb"
 
 DataMapper.finalize
 
