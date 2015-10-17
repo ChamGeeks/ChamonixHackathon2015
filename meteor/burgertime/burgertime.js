@@ -10,7 +10,7 @@ if (Meteor.isClient) {
       }
     }),
     bars : function () {
-      return Session.get('barlist') || 'Loading';
+      return Session.get('barlist') || [{ name: 'Loading' }];
     }
   });
 }
