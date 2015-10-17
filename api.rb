@@ -18,6 +18,8 @@ get '/' do
 end
 
 get '/bars' do
+  content_type :json
+
   @bars = Bar.all
   @bars.to_json(
     only: [:id, :name, :image_url], 
