@@ -1,0 +1,23 @@
+<head>
+  <title>ChamGeeks BurgerTime</title>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Cham Bars</h1>
+  </header>
+  {{> bars}}
+</div>
+</body>
+
+<template name="bars">
+  {{#each people}}
+  {{name}}
+  {{/each}}
+  <ul>
+  </ul>
+</template>
+
+<template name="bar">
+  <li>{{name}}</li>
+</template>
