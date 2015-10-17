@@ -30,11 +30,11 @@ get '/bars/:id' do
 
   @bar = Bar.all(id: params[:id])
   @bar.to_json(
-    only: [:id, :name], 
+    only: [:id, :image_url, :name], 
     methods: [:location],
     relationships: { 
       offers: {
-        only: [:id, :image_url, :type],
+        only: [:id, :type],
         methods: [:day, :starts, :ends, :tagged]
       }
     })
