@@ -27,9 +27,33 @@
   <div>
     <h2>{{name}}</h2>
     <img src="{{image_url}}" style="width:100%; height: auto;">
+    {{#if offers}}
+    {{#each offers}}
+    {{> offer}}
+    {{/each}}
+    {{else}}
+    <p>No offers</p>
+    {{/if}}
   </div>
   {{/with}}
   {{else}}
   <p>Select a bar!</p>
   {{/if}}
+</template>
+
+<template name="offer">
+  <table>
+    <tr>
+      <th>Type</th>
+      <td>{{type}}</td>
+    </tr>
+    <tr>
+      <th>Day</th>
+      <td>{{day}}</td>
+    </tr>
+    <tr>
+      <th>Times</th>
+      <td>{{starts}} - {{ends}}</td>
+    </tr>
+  </table>
 </template>

@@ -17,10 +17,12 @@ Template.bars.events({
 Template.bar.helpers({
   bar: function() {
     var b = Session.get('current_barid');
-    var barinfo;
     if (b) {
-      barinfo = BarInfo.findOne({id:Bars.findOne(b).id});
+      Session.set('current_barinfo', BarInfo.findOne({ id: Bars.findOne(b).id }));
     }
-    return barinfo;
+    return Session.get('current_barinfo');
+  },
+  offers: function() {
+    return Session.get('current_barinfo').offers;
   }
 });

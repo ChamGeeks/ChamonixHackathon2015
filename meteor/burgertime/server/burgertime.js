@@ -1,7 +1,7 @@
 var baseURL = 'https://chamonix-hackathon-2015.herokuapp.com';
-var Bars = new Mongo.Collection("bars");
-var BarInfo = new Mongo.Collection("barinfo");
-var Offers = new Mongo.Collection("offers");
+var Bars = new Mongo.Collection('bars');
+var BarInfo = new Mongo.Collection('barinfo');
+var Offers = new Mongo.Collection('offers');
 
 Meteor.startup(function () {
   if (Bars.find().count() === 0) {
