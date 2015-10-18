@@ -3,15 +3,18 @@ class Bar
 
   property :id, Serial
   property :name, String
-  property :latitude, Decimal
-  property :longitude, Decimal
+  property :latitude, Decimal, precision: 9, scale: 7
+  property :longitude, Decimal, precision: 9, scale: 7
   property :image_url, String
 
   has n, :offers
   has n, :items
 
-  def locations
-    { lat: latitude, long: longitude }
+  def location
+    { 
+       lat: format("%.7f", latitude), 
+       long: format("%.7f", longitude) 
+    }
   end
 
   def tagged
