@@ -10,6 +10,10 @@ class Bar
   has n, :offers
   has n, :items
 
+  def ordered_offers
+    offers.all(order: [:day_of_week_id, :starts_at])
+  end
+
   def location
     { 
        lat: format("%.7f", latitude), 

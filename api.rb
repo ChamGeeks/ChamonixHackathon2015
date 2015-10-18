@@ -39,7 +39,7 @@ get '/bars/:id' do
     only: [:id, :image_url, :name], 
     methods: [:location, :tagged],
     relationships: { 
-      offers: {
+      ordered_offers: {
         only: [:id, :type],
         methods: [:day, :starts, :ends, :tagged]
       }
@@ -58,7 +58,7 @@ end
 get '/offers' do
   content_type :json
 
-  @offers = Offer.all(order: [:day_id, :starts_at])
+  @offers = Offer.all(order: [:day_of_week_id, :starts_at])
   @offers.to_json(
     only: [:id, :type],
     methods: [:day, :starts, :ends, :tagged],
