@@ -116,16 +116,16 @@ INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type, 
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type, extra_info) VALUES (40,3,2,960,1020,'beer','discount', 'Power Hour 3€ pints');
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type, extra_info) VALUES (41,3,3,960,1020,'beer','discount', 'Power Hour 3€ pints');
 INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type, extra_info) VALUES (42,3,4,960,1020,'beer','discount', 'Power Hour 3€ pints');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,1,1020,1140,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,2,1020,1140,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,3,1020,1140,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (29,3,4,1020,1140,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (33,3,1,1260,1320,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (33,3,2,1260,1320,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (33,3,3,1260,1320,'cocktails','two_for_one');
-INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (33,3,4,1260,1320,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (43,3,1,1020,1140,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (44,3,2,1020,1140,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (45,3,3,1020,1140,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (46,3,4,1020,1140,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (47,3,1,1260,1320,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (48,3,2,1260,1320,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (49,3,3,1260,1320,'cocktails','two_for_one');
+INSERT INTO offers (id, bar_id, day_of_week_id, starts_at, ends_at, tags, type) VALUES (50,3,4,1260,1320,'cocktails','two_for_one');
 
--- Items sticked by bars
+-- Items stocked by bars
 INSERT INTO ITEMS (id, bar_id, type, price) VALUES (1, 1, 'beer', 550);
 INSERT INTO ITEMS (id, bar_id, type, price) VALUES (2, 2, 'beer', 450);
 INSERT INTO ITEMS (id, bar_id, type, price) VALUES (3, 3, 'beer', 550);
