@@ -17,7 +17,7 @@
   {{else}}
   <ul>
     {{#each bars}}
-    <li>{{name}}</li>
+    <li>{{name}}{{#if image_url}} <img src="{{image_url}}">{{/if}}</li>
     {{/each}}
   </ul>
   {{/if}}
