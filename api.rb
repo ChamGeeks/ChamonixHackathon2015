@@ -22,7 +22,7 @@ get '/' do
 end
 
 get '/bars' do
-  content_type :json
+  content_type :json, 'charset' => 'utf-8'
 
   @bars = Bar.all
   @bars.to_json(
@@ -32,7 +32,7 @@ get '/bars' do
 end
 
 get '/bars/:id' do
-  content_type :json
+  content_type :json, 'charset' => 'utf-8'
 
   @bar = Bar.all(id: params[:id])
   @bar.to_json(
@@ -47,7 +47,7 @@ get '/bars/:id' do
 end
 
 get '/bars/:id/menu' do
-  content_type :json
+  content_type :json, 'charset' => 'utf-8'
 
   @items = Item.all(bar_id: params[:id])
   @items.to_json(
@@ -56,11 +56,11 @@ get '/bars/:id/menu' do
 end
 
 get '/offers' do
-  content_type :json
+  content_type :json, 'charset' => 'utf-8'
 
   @offers = Offer.all(order: [:day_of_week_id, :starts_at])
   @offers.to_json(
-    only: [:id, :type],
+    only: [:id, :type, :extra_info],
     methods: [:day, :starts, :ends, :tagged],
     relationships: {
       bar: {
@@ -71,7 +71,7 @@ get '/offers' do
 end
 
 get '/days/:day' do
-  content_type :json
+  content_type :json, 'charset' => 'utf-8'
 
   @day = DayOfWeek.all(name: params[:day])
   @day.to_json(
