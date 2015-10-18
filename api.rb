@@ -58,7 +58,7 @@ end
 get '/offers' do
   content_type :json
 
-  @offers = Offer.all
+  @offers = Offer.all(order: [:day_id, :starts_at])
   @offers.to_json(
     only: [:id, :type],
     methods: [:day, :starts, :ends, :tagged],
