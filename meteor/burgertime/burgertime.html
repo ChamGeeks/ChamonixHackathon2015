@@ -7,19 +7,29 @@
     <h1>Cham Bars</h1>
   </header>
   {{> bars}}
+  {{> bar}}
 </div>
 </body>
 
 <template name="bars">
-  {{#with bars}}
-  {{#if error}}
-  <p>There was an error: {{error}}!</p>
-  {{else}}
-  <ul>
-    {{#each bars}}
-    <li>{{name}}{{#if image_url}} <img src="{{image_url}}">{{/if}}</li>
-    {{/each}}
-  </ul>
-  {{/if}}
+  <div style="height:200px;overflow:scroll;">
+    <ul>
+      {{#each bars}}
+      <li>{{name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="bar">
+  {{#if bar}}
+  {{#with bar}}
+  <div>
+    <h2>{{name}}</h2>
+    <img src="{{image_url}}" style="width:100%; height: auto;">
+  </div>
   {{/with}}
+  {{else}}
+  <p>Select a bar!</p>
+  {{/if}}
 </template>
